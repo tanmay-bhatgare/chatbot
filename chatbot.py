@@ -1,4 +1,3 @@
-import asyncio
 from typing import Any
 import httpx
 
@@ -59,6 +58,3 @@ async def askModel(
         print(f"HTTP error occurred: {e.response.status_code}")
         return {"Error": f"Request failed with status code, {e.response.status_code}"}
 
-
-if __name__ == "__main__":
-    print(asyncio.run(askModel("mistral", "Hello")))
